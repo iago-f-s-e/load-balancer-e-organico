@@ -1,8 +1,8 @@
 {
-  "name": "load-balancer-e-organico-market",
+  "name": "load-balancer-e-organico",
   "version": "1.0.0",
   "main": "src/main.ts",
-  "repository": "https://github.com/supportinformatica/load-balancer-e-organico-market.git",
+  "repository": "https://github.com/supportinformatica/load-balancer-e-organico.git",
   "author": "iago-f-s-e <iago.fagundes@outlook.com>",
   "license": "MIT",
   "scripts": {
