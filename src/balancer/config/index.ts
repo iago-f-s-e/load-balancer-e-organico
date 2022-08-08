@@ -1,17 +1,17 @@
-import * as Settings from '@src/server/settings';
+import * as Config from '@src/config';
 import { REPLICATION_FACTOR } from '../constants';
 
 const ports = new Array<number>(REPLICATION_FACTOR)
-  .fill(Settings.FIRST_INSTANCE_PORT)
+  .fill(Config.FIRST_INSTANCE_PORT)
   .map((port, index) => port + index);
 
 export const config = {
-  host: Settings.INTERNAL_HOST,
+  host: Config.INTERNAL_HOST,
   ports,
-  balancerHost: Settings.BALANCER_HOST,
-  balancerPort: Settings.BALANCER_PORT,
+  balancerHost: Config.BALANCER_HOST,
+  balancerPort: Config.BALANCER_PORT,
   fullUrl: '',
-  baseUrl: `http://${Settings.INTERNAL_HOST}`,
+  baseUrl: `http://${Config.INTERNAL_HOST}`,
   currentServerPortIndex: 0,
   getPort: (): number => {
     const firstPortIndex = 0;

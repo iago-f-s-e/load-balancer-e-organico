@@ -1,8 +1,7 @@
-import { ICacheService } from '@src/domain/interfaces';
 import { redisConnection } from '../config';
 import { HasAndDelResponse } from '../types';
 
-export class RedisService implements ICacheService {
+export class RedisService {
   constructor(private readonly cache = redisConnection) {}
 
   private toSet<T>(payload: T): string {

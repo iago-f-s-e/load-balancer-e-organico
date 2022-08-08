@@ -1,6 +1,6 @@
 import Redis from 'ioredis';
-import * as Settings from '@src/server/settings';
+import * as Config from '@src/config';
 
-export const redisConnection = new Redis(Settings.REDIS_URI, {
-  connectTimeout: Settings.REDIS_TIMEOUT
+export const redisConnection = new Redis(Config.REDIS_URI, {
+  connectTimeout: Config.REDIS_TIMEOUT
 });
